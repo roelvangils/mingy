@@ -1,0 +1,6 @@
+php_value memory_limit 64M
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule (.*\.jpg)\((.*)\) mingy/resize.php?file=$1&options=$2 [L,QSA]
+  RewriteRule (.*\.jpg) mingy/resize.php?file=$1&loading=true&noscriptfallback=false [L,QSA]
+</IfModule>

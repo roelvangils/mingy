@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>Mingy example page</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/mingy.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Make images responsive with Mingy</h1>
+    </header>
+    <ul class="small group">
+      <li><img src="images/foto1.jpg" width="180" height="180" alt="" /></li>
+      <li><img src="images/foto2.jpg" width="180" height="180" alt="" /></li>
+      <li><img src="images/foto3.jpg" width="180" height="180" alt="" /></li>
+      <li><img src="images/foto5.jpg" width="180" height="180" alt="" /></li>
+    </ul>  
+    <div class="large group">
+      <img src="images/foto4.jpg" width="930" height="300" alt="" data-retina="auto" data-quality="50" />
+    </div>
+    <ul class="medium group">
+      <li><img src="images/foto7.jpg" width="430" height="300" alt="" /></li>
+      <li><img src="images/foto6.jpg" width="430" height="300" alt="" /></li>
+    </ul>
+    <footer>Alle foto's (Creative Commons) komen uit het portfolio (tag 'southafrica') van <a href="http://www.flickr.com/photos/shaynegelo/sets/72157610613228233/">ShayneG</a> op Flickr.</footer>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="mingy/jquery.mingy.js"></script>
+  <script>
+    $(function() {
+      $('img').mingy({
+        quality : 50,
+        retina : false,
+        reloadOnResize : true
+      });
+    });
+  </script>
+</body>
+</html>
